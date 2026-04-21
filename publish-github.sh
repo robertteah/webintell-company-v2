@@ -15,7 +15,7 @@
 
 set -e
 
-REPO="webintell-company"
+REPO="webintell-company-v2"
 DESC="WebIntell Paperclip company package — Decision Reliability Infrastructure™. 14 AI agents, correct org chart with reportsTo hierarchy, SOUL.md + HEARTBEAT.md + TOOLS.md per agent. Import-ready for Paperclip AI."
 
 echo "🏗️  WebIntell Company v2 — GitHub Publisher"

@@ -1,0 +1,215 @@
+version: '1'
+company:
+  name: WebIntell
+  description: Decision Reliability Infrastructure for competitive strategy.
+  slug: webintell
+goals:
+- title: Close First 3 Market Truth Reports
+  description: Stage 1 validation goal. Everything else is deferred until this is
+    done.
+agents:
+- slug: ceo
+  name: CEO
+  title: Chief Executive Officer
+  capabilities: Sets company direction, runs flywheel check daily, delegates to all
+    direct reports.
+  reportsTo: null
+  monthlyBudget: 200
+  heartbeatInterval: 24h
+  instructionFile: agents/ceo/AGENTS.md
+  extraFiles:
+  - agents/ceo/SOUL.md
+  - agents/ceo/HEARTBEAT.md
+  - agents/ceo/TOOLS.md
+  adapter:
+    type: claude_local
+- slug: cto
+  name: CTO
+  title: Chief Technology Officer
+  capabilities: Owns pipeline stability, engineering prioritization, DRI gate enforcement.
+  reportsTo: ceo
+  monthlyBudget: 150
+  heartbeatInterval: 24h
+  instructionFile: agents/cto/AGENTS.md
+  extraFiles:
+  - agents/cto/SOUL.md
+  - agents/cto/HEARTBEAT.md
+  - agents/cto/TOOLS.md
+  adapter:
+    type: claude_local
+- slug: engineers
+  name: Engineers
+  title: Full-Stack / Backend / Frontend Engineers
+  capabilities: 'Implements product features on ticket assignment. Priority 1: Decision
+    Confidence Score data model.'
+  reportsTo: cto
+  monthlyBudget: 300
+  heartbeatInterval: event
+  instructionFile: agents/engineers/AGENTS.md
+  extraFiles:
+  - agents/engineers/SOUL.md
+  - agents/engineers/HEARTBEAT.md
+  - agents/engineers/TOOLS.md
+  adapter:
+    type: claude_local
+- slug: pm
+  name: PM
+  title: Product Manager
+  capabilities: Routes alerts to executives, approves engineering tickets, tracks
+    milestones.
+  reportsTo: ceo
+  monthlyBudget: 100
+  heartbeatInterval: 24h
+  instructionFile: agents/pm/AGENTS.md
+  extraFiles:
+  - agents/pm/SOUL.md
+  - agents/pm/HEARTBEAT.md
+  - agents/pm/TOOLS.md
+  adapter:
+    type: claude_local
+- slug: data-analyst
+  name: Data Analyst
+  title: Data Analyst
+  capabilities: Classifies signals, computes Decision Confidence Score, runs anomaly
+    detection loop.
+  reportsTo: pm
+  monthlyBudget: 100
+  heartbeatInterval: 8h
+  instructionFile: agents/data-analyst/AGENTS.md
+  extraFiles:
+  - agents/data-analyst/SOUL.md
+  - agents/data-analyst/HEARTBEAT.md
+  - agents/data-analyst/TOOLS.md
+  adapter:
+    type: claude_local
+- slug: researcher
+  name: Researcher
+  title: Researcher
+  capabilities: Reviews pipeline signals daily, identifies patterns, flags lead magnet
+    candidates.
+  reportsTo: data-analyst
+  monthlyBudget: 75
+  heartbeatInterval: 24h
+  instructionFile: agents/researcher/AGENTS.md
+  extraFiles:
+  - agents/researcher/SOUL.md
+  - agents/researcher/HEARTBEAT.md
+  - agents/researcher/TOOLS.md
+  adapter:
+    type: claude_local
+- slug: cmo
+  name: CMO
+  title: Chief Marketing Officer
+  capabilities: Content pipeline, lead magnets, ICP language capture, manages GTM
+    team.
+  reportsTo: ceo
+  monthlyBudget: 100
+  heartbeatInterval: 24h
+  instructionFile: agents/cmo/AGENTS.md
+  extraFiles:
+  - agents/cmo/SOUL.md
+  - agents/cmo/HEARTBEAT.md
+  - agents/cmo/TOOLS.md
+  adapter:
+    type: claude_local
+- slug: sales-rep
+  name: Sales Rep
+  title: Sales Representative
+  capabilities: 'Warm outreach only (Stage 1). Discovery calls, demos, proposals.
+    Target: 3 qualified conversations/week.'
+  reportsTo: cmo
+  monthlyBudget: 100
+  heartbeatInterval: 24h
+  instructionFile: agents/sales-rep/AGENTS.md
+  extraFiles:
+  - agents/sales-rep/SOUL.md
+  - agents/sales-rep/HEARTBEAT.md
+  - agents/sales-rep/TOOLS.md
+  adapter:
+    type: claude_local
+- slug: content-writer
+  name: Content Writer
+  title: Content Writer
+  capabilities: LinkedIn posts 2x/week, Missed Signal Index entries, lead magnet copy.
+  reportsTo: cmo
+  monthlyBudget: 75
+  heartbeatInterval: 96h
+  instructionFile: agents/content-writer/AGENTS.md
+  extraFiles:
+  - agents/content-writer/SOUL.md
+  - agents/content-writer/HEARTBEAT.md
+  - agents/content-writer/TOOLS.md
+  adapter:
+    type: claude_local
+- slug: pe-sales
+  name: PE Sales
+  title: PE Enterprise Sales Agent
+  capabilities: Institutional PE/VC outreach. AUM-linked deals. Activates Week 6 after
+    first audit closes.
+  reportsTo: cmo
+  monthlyBudget: 100
+  heartbeatInterval: 24h
+  instructionFile: agents/pe-sales/AGENTS.md
+  extraFiles:
+  - agents/pe-sales/SOUL.md
+  - agents/pe-sales/HEARTBEAT.md
+  - agents/pe-sales/TOOLS.md
+  adapter:
+    type: claude_local
+- slug: design-web
+  name: Design Web
+  title: Design and Web Agent
+  capabilities: Homepage v2, landing pages, alert card UI. Activates Month 2.
+  reportsTo: cmo
+  monthlyBudget: 75
+  heartbeatInterval: event
+  instructionFile: agents/design-web/AGENTS.md
+  extraFiles:
+  - agents/design-web/SOUL.md
+  - agents/design-web/HEARTBEAT.md
+  - agents/design-web/TOOLS.md
+  adapter:
+    type: claude_local
+- slug: customer-success
+  name: Customer Success
+  title: Customer Success Agent
+  capabilities: First-signal-seen within 48h, alert engagement, Month 3 SaaS conversion,
+    case studies.
+  reportsTo: ceo
+  monthlyBudget: 75
+  heartbeatInterval: 24h
+  instructionFile: agents/customer-success/AGENTS.md
+  extraFiles:
+  - agents/customer-success/SOUL.md
+  - agents/customer-success/HEARTBEAT.md
+  - agents/customer-success/TOOLS.md
+  adapter:
+    type: claude_local
+- slug: finance-ops
+  name: Finance Ops
+  title: Finance and Operations Agent
+  capabilities: Daily financial floor check, Decision Log maintenance, weekly OS review.
+  reportsTo: ceo
+  monthlyBudget: 50
+  heartbeatInterval: 24h
+  instructionFile: agents/finance-ops/AGENTS.md
+  extraFiles:
+  - agents/finance-ops/SOUL.md
+  - agents/finance-ops/HEARTBEAT.md
+  - agents/finance-ops/TOOLS.md
+  adapter:
+    type: claude_local
+- slug: legal
+  name: Legal
+  title: Legal Agent
+  capabilities: Contract review before send, trademark filing timeline, NDA management.
+  reportsTo: ceo
+  monthlyBudget: 50
+  heartbeatInterval: event
+  instructionFile: agents/legal/AGENTS.md
+  extraFiles:
+  - agents/legal/SOUL.md
+  - agents/legal/HEARTBEAT.md
+  - agents/legal/TOOLS.md
+  adapter:
+    type: claude_local

@@ -1,0 +1,22 @@
+# OS artifacts
+.DS_Store
+Thumbs.db
+
+# Editor artifacts
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Secrets — never commit these
+.env
+*.env
+secrets/
+**/secrets/
+
+# Paperclip runtime artifacts
+.paperclip/
+paperclip.lock
+
+# Node
+node_modules/

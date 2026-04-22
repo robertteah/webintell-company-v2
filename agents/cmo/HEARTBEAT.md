@@ -2,6 +2,16 @@
 
 Run this checklist every heartbeat, in order.
 
+## ICP LOCK — Read Before Every Heartbeat
+
+**Target buyer:** CEO / Founder / VP Sales at $1M–$50M ARR B2B SaaS, or VC/PE Partner.
+
+**NEVER target:** VP Engineering, CTO, Staff Engineers, DevOps leads, SREs, engineering managers, or any technical infrastructure buyer. WebIntell solves an executive strategic decision problem, not an engineering infrastructure problem.
+
+**If any task, outreach, or content is aimed at engineering leaders — stop. Reassign to the correct ICP before proceeding.**
+
+
+
 ---
 
 ## Step 1 — Confirm Identity

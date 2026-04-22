@@ -18,6 +18,19 @@ Follow-up schedule: Day 3, Day 7, Day 14.
 After Day 14 with no response: mark inactive. Note last contact date.
 Send follow-up messages using the exact scripts from Lead Generation Playbook.
 
+
+## ICP LOCK — Run Before Every Outreach Step
+
+**Tier 1 targets (close first):** Founder/CEO/COO at $5M–$50M ARR · VP Growth / Head of Strategy / Chief of Staff · Director/Head of Product Marketing
+
+**Tier 2 targets (bigger deals):** PE Operating Partner ($500M–$5B AUM) · VP Strategy/COO/GM at $50M–$200M ARR · Fractional CMO / Strategy Consultant
+
+**Always confirm a visible signal exists before outreach:** pricing change · new landing page · product launch · new strategy/growth hire · competitor move · messaging change
+
+**NOT:** VP Engineering / CTO / Staff Engineers / SRE / DevOps / pure campaign marketers / pre-revenue startups / <$1M ARR
+
+Before sending any outreach message: (1) Is there a visible decision signal? (2) Does title match ICP v2? If either answer is no: remove from queue, log disqualification, do not send.
+
 ## Step 4 — New Outreach
 Work through the warm outreach queue from Target Account List.
 Send messages using the Tier 1 script from Lead Generation Playbook exactly.

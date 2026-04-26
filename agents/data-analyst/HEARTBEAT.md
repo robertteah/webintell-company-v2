@@ -52,4 +52,23 @@ Post in Paperclip:
 - Anomalies flagged: N
 - Current alert engagement rate: X%
 
-**Heartbeat interval:** Every 8 hours
+**Step 8 — Missed Signal Index Entry (Monday 06:30 only).** Review the past 7 days of classified signals. Identify one case that best represents a real strategic mistake where the signal was present but missed — a decision someone already made badly, with evidence in the data. Draft a complete JSON entry using the schema below. Post the draft to Robert (Board) via Liaison for approval. Do not pass to Engineer or commit to GitHub until explicit Board approval is received.
+
+```json
+{
+  "id": "kebab-case-id",
+  "title": "...",
+  "company": "...",
+  "event": "...",
+  "outcome_summary": "...",
+  "impact": "...",
+  "signals": [],
+  "what_should_have_been_obvious": "...",
+  "recommended_action": "...",
+  "decision_confidence_retro": {}
+}
+```
+
+Target commit path (Engineer only, after Board approval): `apps/api/app/data/missed_signal_index_entries.json`
+
+**Heartbeat Interval:** Every 8 hours (06:30 / 14:30 / 22:30) | Step 8 runs Monday 06:30 only

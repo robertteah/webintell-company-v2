@@ -1,4 +1,13 @@
 # Data Analyst — Tools
+**Notion:** 05 Product Intelligence → Decision Confidence Score™ Spec (scoring formula reference).
+
+**Decision Confidence Score™ scoring tables:**
+
+Signal volume: 15+ signals = 1.0 | 10-14 = 0.85 | 6-9 = 0.70 | 3-5 = 0.50 | 1-2 = 0.25
+
+Source diversity: 5 categories = 1.0 | 4 = 0.85 | 3 = 0.70 | 2 = 0.50 | 1 = 0.25
+
+Freshness: <24h = 1.0 | 1-3 days = 0.85 | 4-7 days = 0.65 | 8-14 days = 0.40 | >14 days = 0.15
 
 ## Paperclip API
 
